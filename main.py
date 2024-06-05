@@ -1,12 +1,12 @@
 # Alexander Bass
 # Created 4/10/24
-# Last Edited 4/13/24
+# Last Edited 6/5/24
 import time
-from math import pi, cos, sin, sqrt  # noqa: F401
+from math import sin
 from point import Point, Rotator
 from grass_donut import DonutEntity
 from real_donut import RealDonutEntity
-from entity import Entity, PointBlobEntity
+from entity import PointBlobEntity
 from util import to_rad
 
 WIDTH = 150

@@ -44,7 +44,6 @@ class RealDonutEntity(PointBlobEntity):
         tf.build()
         for p in self.points:
             p.rotate(tf)
-        # pass
 
     def shift(self, x, y, z):
         for p in self.points:
