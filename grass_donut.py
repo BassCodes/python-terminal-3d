@@ -1,6 +1,6 @@
 # Alexander Bass
 # Created 4/13/24
-# Last Edited 4/13/24
+# Last Edited 6/5/24
 from point import Point, Rotator
 from util import to_rad
 import ppm
@@ -94,9 +94,8 @@ class DonutEntity(PointBlobEntity):
 
     def update(self, t):
         tf = Rotator()
-        tf.rotate_y(math.cos(t / 25) * 0.5)
-        # tf.rotate_z(0.02)
-        tf.rotate_x(math.sin(t / 20) * 0.5 + 0.02)
+        tf.rotate_y(math.cos(t / 25) * 0.05)
+        tf.rotate_x(math.sin(t / 20) * 0.05 + 0.002)
         tf.build()
         for p in self.points:
             p.rotate(tf)

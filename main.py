@@ -19,6 +19,7 @@ HALF_DEPTH = DEPTH // 2
 NEGATIVE_DEPTH = -DEPTH
 
 
+# Convert the world coordinate system to the screen coordinate system
 def world_to_screen(p_x, p_y, p_z):
     s_x = round(p_x + HALF_WIDTH)
     s_y = round(p_y + HALF_HEIGHT)
@@ -112,8 +113,15 @@ def main():
     entities = []
     # entities.append(AxisEntity())
     # entities.append(Origin())
-    entities.append(RealDonutEntity())
-    entities.append(DonutEntity())
+    donut = RealDonutEntity()
+    cube_donut = DonutEntity()
+
+    for p in donut.points:
+        p.translate_x(30)
+    for p in cube_donut.points:
+        p.translate_x(-30)
+    entities.append(donut)
+    entities.append(cube_donut)
     t = 1
     last_time = time.time()
     dt = 0
